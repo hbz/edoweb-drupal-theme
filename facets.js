@@ -75,24 +75,26 @@ function expandFacet() {
 // replace action textes with icons
 function actionIcons() {
  
-  replaceWithIcon(jQuery('.form-type-item a[data-bundle="monograph"]'), 'octicon octicon-repo');
-  replaceWithIcon(jQuery('.form-type-item a[data-bundle="journal"]'), 'octicon octicon-versions');
-  replaceWithIcon(jQuery('.form-type-item a[data-bundle="volume"]'), 'octicon octicon-list-ordered');
-  replaceWithIcon(jQuery('.form-type-item a[data-bundle="issue"]'), 'octicon octicon-book');
-  replaceWithIcon(jQuery('.form-type-item a[data-bundle="article"]'), 'octicon octicon-file-text');
-  replaceWithIcon(jQuery('.form-type-item a[data-bundle="file"]'), 'octicon octicon-file-binary');
+  replaceWithIcon(jQuery('.form-type-item a[data-bundle="monograph"]'), 'semi-octicon octicon-repo');
+  replaceWithIcon(jQuery('.form-type-item a[data-bundle="journal"]'), 'semi-octicon octicon-versions');
+  replaceWithIcon(jQuery('.form-type-item a[data-bundle="volume"]'), 'semi-octicon octicon-list-ordered');
+  replaceWithIcon(jQuery('.form-type-item a[data-bundle="issue"]'), 'semi-octicon octicon-book');
+  replaceWithIcon(jQuery('.form-type-item a[data-bundle="article"]'), 'semi-octicon octicon-file-text');
+  replaceWithIcon(jQuery('.form-type-item a[data-bundle="file"]'), 'semi-octicon octicon-file-binary');
+  replaceWithIcon(jQuery('.form-type-item a[data-bundle="person"]'), 'semi-batch-icons batch-add-person');
+  replaceWithIcon(jQuery('.form-type-item a[data-bundle="coorporate_body"]'), 'semi-batch-icons batch-add-organisation');
 
   replaceWithIcon(jQuery('label a[href="#"]'), 'batch-icons batch-icon-plus');
   replaceWithIcon(jQuery('label[for="edit-field-edoweb-parent-und"] a[href="#"]'), 'batch-icons batch-icon-concat');
   replaceWithIcon(jQuery('label[for="edit-field-edoweb-identifier-ht-und-0-value"] a[href="#"]'), 'batch-icons batch-icon-concat');
   replaceWithIcon(jQuery('label[for="edit-field-edoweb-parallel-und"] a[href="#"]'), 'batch-icons batch-icon-concat');
 
-  replaceWithIcon(jQuery('td').filter(function(){return /(^|\s)(Monograph)(\s|$)/.test(jQuery(this).text())}), 'mega-octicon octicon-repo');
-  replaceWithIcon(jQuery('td').filter(function(){return /(^|\s)(Journal)(\s|$)/.test(jQuery(this).text())}), 'mega-octicon octicon-versions');
-  replaceWithIcon(jQuery('td').filter(function(){return /(^|\s)(Volume)(\s|$)/.test(jQuery(this).text())}), 'mega-octicon octicon-list-ordered');
-  replaceWithIcon(jQuery('td').filter(function(){return /(^|\s)(Issue)(\s|$)/.test(jQuery(this).text())}), 'mega-octicon octicon-book');
-  replaceWithIcon(jQuery('td').filter(function(){return /(^|\s)(Article)(\s|$)/.test(jQuery(this).text())}), 'mega-octicon octicon-file-text');
-  replaceWithIcon(jQuery('td').filter(function(){return /(^|\s)(File)(\s|$)/.test(jQuery(this).text())}), 'mega-octicon octicon-file-binary');
+  replaceWithIcon(jQuery('td').filter(function(){return /(^|\s)(Monograph)(\s|$)/.test(jQuery(this).text())}), 'semi-octicon octicon-repo');
+  replaceWithIcon(jQuery('td').filter(function(){return /(^|\s)(Journal)(\s|$)/.test(jQuery(this).text())}), 'semi-octicon octicon-versions');
+  replaceWithIcon(jQuery('td').filter(function(){return /(^|\s)(Volume)(\s|$)/.test(jQuery(this).text())}), 'semi-octicon octicon-list-ordered');
+  replaceWithIcon(jQuery('td').filter(function(){return /(^|\s)(Issue)(\s|$)/.test(jQuery(this).text())}), 'semi-octicon octicon-book');
+  replaceWithIcon(jQuery('td').filter(function(){return /(^|\s)(Article)(\s|$)/.test(jQuery(this).text())}), 'semi-octicon octicon-file-text');
+  replaceWithIcon(jQuery('td').filter(function(){return /(^|\s)(File)(\s|$)/.test(jQuery(this).text())}), 'semi-octicon octicon-file-binary');
 
   replaceMatchWithIcon('.breadcrumb a', 'Monograph:', 'octicon octicon-repo');
   replaceMatchWithIcon('.breadcrumb a', 'Journal:', 'octicon octicon-versions');
@@ -100,6 +102,9 @@ function actionIcons() {
   replaceMatchWithIcon('.breadcrumb a', 'Issue:', 'octicon octicon-book');
   replaceMatchWithIcon('.breadcrumb a', 'Article:', 'octicon octicon-file-text');
   replaceMatchWithIcon('.breadcrumb a', 'File:', 'octicon octicon-file-binary');
+  replaceMatchWithIcon('.breadcrumb a', 'Person:', 'batch-icons batch-icon-person');
+  replaceMatchWithIcon('.breadcrumb a', 'Authority Resource:', 'batch-icons batch-icon-authorityResource');
+  replaceMatchWithIcon('.breadcrumb a', 'Körperschaft:', 'batch-icons batch-icon-organisation');
 
   replaceMatchWithIcon('h1#page-title', 'Monograph:', 'mega-octicon octicon-repo');
   replaceMatchWithIcon('h1#page-title', 'Journal:', 'mega-octicon octicon-versions');
@@ -107,6 +112,9 @@ function actionIcons() {
   replaceMatchWithIcon('h1#page-title', 'Issue:', 'mega-octicon octicon-book');
   replaceMatchWithIcon('h1#page-title', 'Article:', 'mega-octicon octicon-file-text');
   replaceMatchWithIcon('h1#page-title', 'File:', 'mega-octicon octicon-file-binary');
+  replaceMatchWithIcon('h1#page-title', 'Person:', 'mega-batch-icons batch-icon-person');
+  replaceMatchWithIcon('h1#page-title', 'Authority Resource:', 'mega-batch-icons batch-icon-authorityResource');
+  replaceMatchWithIcon('h1#page-title', 'Körperschaft:', 'mega-batch-icons batch-icon-organisation');
 }
 
   
@@ -167,6 +175,6 @@ jQuery(document).ready(function() {
   actionIcons();
   appendSortable();
   zoomTable();
-  //addDatePicker();
+  addDatePicker();
 });
  
