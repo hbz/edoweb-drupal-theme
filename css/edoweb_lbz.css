@@ -205,7 +205,7 @@ ul.edoweb-facets-available a:hover{
 }
 
 .form-type-item{
-  padding-bottom:5px;
+  padding-bottom:10px;
   width: 95%;
 }
 
@@ -220,6 +220,10 @@ ul.edoweb-facets-available a:hover{
 
 .toggleButton{
   float:right; 
+}
+
+.pointer{
+   cursor: pointer;
 }
 
 

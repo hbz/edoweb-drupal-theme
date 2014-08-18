@@ -26,6 +26,18 @@
   -ms-user-select: none;
   user-select: none;
 }
+.semi-octicon {
+  font: normal normal 24px octicons;
+  line-height: 1;
+  display: inline-block;
+  text-decoration: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
 .mega-octicon {
   font: normal normal 32px octicons;
   line-height: 1;
