@@ -8,11 +8,11 @@ function appendToggle() {
     facetHeader.parent().attr('id', facetName);
     //alert(facetName + ': ' +  jQuery.cookie(facetName));
     if(jQuery.cookie(facetName)){
-      facetHeader.append('<div class="toggleButton"><span class="' + jQuery.cookie(facetName) + '"></span>&nbsp;</div>');
+      facetHeader.append('<div class="toggleButton"><span class="pointer ' + jQuery.cookie(facetName) + '"></span>&nbsp;</div>');
       //jQuery(this).find('div span.octicon-triangle-up').parent().parent().parent().find("ul").css('display', 'block');
       facetHeader.find('div span.octicon-triangle-down').parent().parent().parent().find("ul").css('display', 'none');
     }else{
-      facetHeader.append('<div class="toggleButton"><span class="octicon octicon-triangle-up"></span>&nbsp;</div>');
+      facetHeader.append('<div class="toggleButton"><span class="pointer octicon octicon-triangle-up"></span>&nbsp;</div>');
     }
     
     
@@ -35,7 +35,7 @@ function appendSorting(){
 }
 
 function appendZoom(){
-  jQuery('.edoweb-entity-list ul.pager:first').append('<div class="toggleButton"><span class="batch-icons batch-icon-zoom-plus"></span><span class="batch-icons batch-icon-zoom-minus"></div>');
+  jQuery('.edoweb-entity-list ul.pager:first').append('<div class="toggleButton"><span class="pointer batch-icons batch-icon-zoom-plus"></span><span class="pointer batch-icons batch-icon-zoom-minus"></div>');
 }
 
 function appendSortable() {
@@ -75,19 +75,19 @@ function expandFacet() {
 // replace action textes with icons
 function actionIcons() {
  
-  replaceWithIcon(jQuery('.form-type-item a[data-bundle="monograph"]'), 'semi-octicon octicon-repo');
-  replaceWithIcon(jQuery('.form-type-item a[data-bundle="journal"]'), 'semi-octicon octicon-versions');
-  replaceWithIcon(jQuery('.form-type-item a[data-bundle="volume"]'), 'semi-octicon octicon-list-ordered');
-  replaceWithIcon(jQuery('.form-type-item a[data-bundle="issue"]'), 'semi-octicon octicon-book');
-  replaceWithIcon(jQuery('.form-type-item a[data-bundle="article"]'), 'semi-octicon octicon-file-text');
-  replaceWithIcon(jQuery('.form-type-item a[data-bundle="file"]'), 'semi-octicon octicon-file-binary');
-  replaceWithIcon(jQuery('.form-type-item a[data-bundle="person"]'), 'semi-batch-icons batch-add-person');
-  replaceWithIcon(jQuery('.form-type-item a[data-bundle="coorporate_body"]'), 'semi-batch-icons batch-add-organisation');
+  replaceLinkWithIcon(jQuery('.form-type-item a[data-bundle="monograph"]'), 'semi-octicon octicon-repo');
+  replaceLinkWithIcon(jQuery('.form-type-item a[data-bundle="journal"]'), 'semi-octicon octicon-versions');
+  replaceLinkWithIcon(jQuery('.form-type-item a[data-bundle="volume"]'), 'semi-octicon octicon-list-ordered');
+  replaceLinkWithIcon(jQuery('.form-type-item a[data-bundle="issue"]'), 'semi-octicon octicon-book');
+  replaceLinkWithIcon(jQuery('.form-type-item a[data-bundle="article"]'), 'semi-octicon octicon-file-text');
+  replaceLinkWithIcon(jQuery('.form-type-item a[data-bundle="file"]'), 'semi-octicon octicon-file-binary');
+  replaceLinkWithIcon(jQuery('.form-type-item a[data-bundle="person"]'), 'semi-batch-icons batch-add-person');
+  replaceLinkWithIcon(jQuery('.form-type-item a[data-bundle="coorporate_body"]'), 'semi-batch-icons batch-add-organisation');
 
-  replaceWithIcon(jQuery('label a[href="#"]'), 'batch-icons batch-icon-plus');
-  replaceWithIcon(jQuery('label[for="edit-field-edoweb-parent-und"] a[href="#"]'), 'batch-icons batch-icon-concat');
-  replaceWithIcon(jQuery('label[for="edit-field-edoweb-identifier-ht-und-0-value"] a[href="#"]'), 'batch-icons batch-icon-concat');
-  replaceWithIcon(jQuery('label[for="edit-field-edoweb-parallel-und"] a[href="#"]'), 'batch-icons batch-icon-concat');
+  replaceLinkWithIcon(jQuery('label a[href="#"]'), 'batch-icons batch-icon-plus');
+  replaceLinkWithIcon(jQuery('label[for="edit-field-edoweb-parent-und"] a[href="#"]'), 'batch-icons batch-icon-concat');
+  replaceLinkWithIcon(jQuery('label[for="edit-field-edoweb-identifier-ht-und-0-value"] a[href="#"]'), 'batch-icons batch-icon-concat');
+  replaceLinkWithIcon(jQuery('label[for="edit-field-edoweb-parallel-und"] a[href="#"]'), 'batch-icons batch-icon-concat');
 
   replaceWithIcon(jQuery('td').filter(function(){return /(^|\s)(Monograph)(\s|$)/.test(jQuery(this).text())}), 'semi-octicon octicon-repo');
   replaceWithIcon(jQuery('td').filter(function(){return /(^|\s)(Journal)(\s|$)/.test(jQuery(this).text())}), 'semi-octicon octicon-versions');
@@ -119,7 +119,7 @@ function actionIcons() {
 
   
 // replace action textes with icons
-function replaceWithIcon(target, iconCss) {
+function replaceLinkWithIcon(target, iconCss) {
   target
     .attr('title', target.html())
     .html('<span class="' + iconCss + '"></span>');
@@ -127,10 +127,18 @@ function replaceWithIcon(target, iconCss) {
 }
 
 // replace action textes with icons
+function replaceWithIcon(target, iconCss) {
+  target
+    .attr('title', target.html())
+    .html('<span style="cursor: default;" class="' + iconCss + '"></span>');
+ 
+}
+
+// replace action textes with icons
 function replaceMatchWithIcon(filter, match, iconCss) {
   var target = jQuery(filter + ':contains("' + match + '")');
   target.each(function(){
-    var elementText = target.html().replace(match, '<span style="margin-right: 10px;" class="' + iconCss + '"></span>');
+    var elementText = target.html().replace(match, '<span style="margin-right: 10px; cursor: default;" class="' + iconCss + '"></span>');
     target.html(elementText);
   });
     

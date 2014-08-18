@@ -222,4 +222,8 @@ ul.edoweb-facets-available a:hover{
   float:right; 
 }
 
+.pointer{
+   cursor: pointer;
+}
+
 
