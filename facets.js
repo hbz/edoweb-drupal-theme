@@ -152,9 +152,10 @@
     	    rowHeader.append('<div class="toggleButton"><span class="octicon octicon-triangle-left"></span>&nbsp;</div>');
         });
 
-      $('.edoweb-facets', context).resizable({
+      /*$('.edoweb-facets', context).resizable({
 	alsoResize:'.edoweb-entity-list',
 	});
+	*/
 
 	$('.edoweb-facets legend', context).click(function(){
           $(this).parent().find('div.fieldset-wrapper').toggle("clip", function() {
