@@ -151,9 +151,17 @@ fieldset.edoweb-facets {
   float: left;
 }
 
+fieldset.edoweb-facets-smart {
+  
+}
+
 fieldset.edoweb-entity-list {
   width: 75%;
   float: left;
+}
+
+fieldset.edoweb-entity-list-smart{
+  width: 100%;
 }
 
 #block-edoweb-edoweb-search-block {

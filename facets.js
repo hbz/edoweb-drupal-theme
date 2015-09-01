@@ -8,7 +8,7 @@
         var facetHeader = $(this);
         var facetName = facetHeader.html();
 
-        facetHeader.parent().attr('id', facetName);
+        facetHeader.parent().attr('id', facetName.replace(/\W/g,""));
         //alert(facetName + ': ' +  $.cookie(facetName));
         if ($.cookie(facetName)) {
           facetHeader.append('<div class="toggleButton"><span class="' + $.cookie(facetName) + '"></span>&nbsp;</div>');
@@ -39,7 +39,7 @@
           var cookieValue = '';
           //alert(sorts.length);
           while (i < sorts.length) {
-            cookieValue = cookieValue +' ' + sorts[i];
+	    cookieValue = cookieValue +' ' + sorts[i].replace("/","");
             i++;
           }
           $.cookie('sortFacets', cookieValue.trim());
@@ -71,7 +71,8 @@
         'article': 'octicon-file-text',
         'file': 'octicon-file-binary',
         'webpage': 'octicon-browser',
-        'version': 'octicon-git-branch'
+        'version': 'octicon-git-branch',
+        'part': 'octicon-file-submodule'
       }
 
       for (var bundle in icons) {
@@ -80,7 +81,7 @@
         $('#edoweb-tree-menu a[data-bundle="' + bundle + '"]', context).prepend($('<span>&nbsp;</span>').addClass('octicon ' + icon));
         $('.edoweb-tree a[data-bundle="' + bundle + '"]', context).before($('<span>&nbsp;</span>').addClass('octicon ' + icon));
         $('.entity-label-' + bundle, context).before($('<span>&nbsp;</span>').addClass('octicon ' + icon));
-        $('body.entity-type-' + bundle + ' h1.title', context).addClass('mega-octicon ' + icon);
+        $('body.entity-type-' + bundle + ' h1.title', context).prepend($('<span>&nbsp;</span>').addClass('mega-octicon ' + icon));
       }
 
       replaceWithIcon($('label a[href="#"]'), 'batch-icons batch-icon-plus', context);
@@ -118,6 +119,57 @@
       });
     }
   };
+
+  Drupal.behaviors.edoweb_drupal_theme_flatrows = {
+    attach: function (context, settings) {
+
+      // append the div for toggle functionality to each row heading
+      $('div.compact div', context).parent().find('h1').each(function() {
+        var rowHeader = $(this);
+    	    rowHeader.append('<div class="toggleButton"><span class="octicon octicon-triangle-down"></span>&nbsp;</div>');
+        });
+
+	$('div.compact div.field').hide();
+
+	$('div.compact h1 div', context).click(function(){
+          $(this).parent().parent().find('div.field').toggle("clip", function() {
+            var compactHeader = $(this).parent().find('h1 div span');
+            compactHeader.toggleClass('octicon-triangle-down').toggleClass('octicon-triangle-up');
+            var status = compactHeader.attr('class');
+          });
+      });
+
+    }
+ };
+
+
+  Drupal.behaviors.edoweb_drupal_theme_facetflip = {
+    attach: function (context, settings) {
+
+      // append the div for toggle functionality to each row heading
+      $('.edoweb-facets legend', context).each(function() {
+        var rowHeader = $(this);
+    	    rowHeader.append('<div class="toggleButton"><span class="octicon octicon-triangle-left"></span>&nbsp;</div>');
+        });
+
+      $('.edoweb-facets', context).resizable({
+	alsoResize:'.edoweb-entity-list',
+	});
+
+	$('.edoweb-facets legend', context).click(function(){
+          $(this).parent().find('div.fieldset-wrapper').toggle("clip", function() {
+            var compactHeader = $(this).parent().find('legend div span');
+            compactHeader.toggleClass('octicon-triangle-left').toggleClass('octicon-triangle-down');
+	    compactHeader.parent().parent().parent().toggleClass('edoweb-facets-smart').toggleClass('edoweb-facets');
+	    compactHeader.parent().parent().parent().parent().find('.edoweb-entity-list').toggleClass('edoweb-entity-list-smart').toggleClass('.edoweb.entity-list');
+            var status = compactHeader.attr('class');
+          });
+      });
+
+    }
+ };
+
+
 
   //Drupal.behaviors.edoweb_drupal_theme_datepicker = {
   //  attach: function (context, settings) {
