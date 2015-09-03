@@ -120,6 +120,58 @@
     }
   };
 
+  Drupal.behaviors.edoweb_drupal_theme_flatrows = {
+    attach: function (context, settings) {
+
+      // append the div for toggle functionality to each row heading
+      $('div.compact div', context).parent().find('h1').each(function() {
+        var rowHeader = $(this);
+    	    rowHeader.append('<div class="toggleButton"><span class="octicon octicon-triangle-down"></span>&nbsp;</div>');
+        });
+
+	$('div.compact div.field').hide();
+
+	$('div.compact h1 div', context).click(function(){
+          $(this).parent().parent().find('div.field').toggle("clip", function() {
+            var compactHeader = $(this).parent().find('h1 div span');
+            compactHeader.toggleClass('octicon-triangle-down').toggleClass('octicon-triangle-up');
+            var status = compactHeader.attr('class');
+          });
+      });
+
+    }
+ };
+
+
+  Drupal.behaviors.edoweb_drupal_theme_facetflip = {
+    attach: function (context, settings) {
+
+      // append the div for toggle functionality to each row heading
+      $('.edoweb-facets legend', context).each(function() {
+        var rowHeader = $(this);
+    	    rowHeader.append('<div class="toggleButton"><span class="octicon octicon-triangle-left"></span>&nbsp;</div>');
+        });
+
+      /*$('.edoweb-facets', context).resizable({
+	alsoResize:'.edoweb-entity-list',
+	});
+	*/
+
+	$('.edoweb-facets legend', context).click(function(){
+          $(this).parent().find('div.fieldset-wrapper').toggle("clip", function() {
+            var compactHeader = $(this).parent().find('legend div span');
+            compactHeader.toggleClass('octicon-triangle-left').toggleClass('octicon-triangle-down');
+	    compactHeader.parent().parent().parent().toggleClass('edoweb-facets-smart').toggleClass('edoweb-facets');
+	    compactHeader.parent().parent().parent().parent().find('.edoweb-entity-list').toggleClass('edoweb-entity-list-smart').toggleClass('.edoweb.entity-list');
+            var status = compactHeader.attr('class');
+          });
+      });
+
+    }
+ };
+
+
+
   //Drupal.behaviors.edoweb_drupal_theme_datepicker = {
   //  attach: function (context, settings) {
   //    // datepicker
