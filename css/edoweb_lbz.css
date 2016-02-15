@@ -204,11 +204,15 @@ ul.edoweb-facets-available>li span {
 
 ul.edoweb-facets-available a {
   color: #871d33;
+  word-wrap: break-word:
+  word-break: break-word;
 }
 
 
 ul.edoweb-facets-available a:hover {
   color: #ff9933;
+  word-wrap: break-word;
+  word-break: break-word;
 }
 
 .item-list h3 {
