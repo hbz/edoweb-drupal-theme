@@ -22,7 +22,7 @@
          + ' data-target-bundle="monograph" data-curie="lr:' + htnr + '" resource="http://lobid.org/resource/' + htnr + '" class="resolved">'
          + htnr +'</a>'
          + '</div></div>');
-      $('.field-name-field-edoweb-doi').after($(this));
+      $('.field-name-field-edoweb-urn').after($(this));
 
       });
 
