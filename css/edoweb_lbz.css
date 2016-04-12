@@ -322,6 +322,10 @@ ul.edoweb-facets-available a:hover {
 }
 
 #content h2.title-suffix {
+    padding:5px;
     font-size: 1.0em;
     line-height: 1.4;
+}
+table h1.title, h2.title-suffix {
+  display: inline;
 }
