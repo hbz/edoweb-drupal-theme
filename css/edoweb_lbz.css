@@ -340,10 +340,14 @@ table h1.title, h2.title-suffix {
 }
 
 /* css based reduced information set: get rid of unessessary fields */
+.field-name-field-edoweb-title {
+  display: none;
+}
+
 .field-name-field-edoweb-identifier-ht {
   display: none;
 }
 
-.form-type-item a[data-bundle="issue"] {
+/*.form-type-item a[data-bundle="issue"] {
   display: none;
-}
+}*/
