@@ -122,10 +122,10 @@ td {
 
 }
 
-td .item-list ul li a {
+/*td .item-list ul li a {
   word-wrap: break-word;
   word-break: break-word;
-}
+}*/
 
 table:not([tableheader-processed]) th {
   background-repeat: no-repeat;
