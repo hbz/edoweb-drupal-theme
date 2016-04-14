@@ -122,6 +122,11 @@ td {
 
 }
 
+td .item-list ul li a {
+  word-wrap: break-word;
+  word-break: break-word;
+}
+
 table:not([tableheader-processed]) th {
   background-repeat: no-repeat;
   background-position: right;
@@ -212,6 +217,10 @@ ul.edoweb-facets-available a {
 
 ul.edoweb-facets-available a:hover {
   color: #ff9933;
+}
+
+.item-list .title {
+  font-weight: 400;
 }
 
 .item-list h3 {
@@ -329,3 +338,16 @@ ul.edoweb-facets-available a:hover {
 table h1.title, h2.title-suffix {
   display: inline;
 }
+
+/* css based reduced information set: get rid of unessessary fields */
+.field-name-field-edoweb-title {
+  display: none;
+}
+
+.field-name-field-edoweb-identifier-ht {
+  display: none;
+}
+
+/*.form-type-item a[data-bundle="issue"] {
+  display: none;
+}*/
