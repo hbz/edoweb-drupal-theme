@@ -340,7 +340,7 @@ table h1.title, h2.title-suffix {
 }
 
 /* css based reduced information set: get rid of unessessary fields */
-.field-name-field-edoweb-title {
+.default .field-name-field-edoweb-title {
   display: none;
 }
 
