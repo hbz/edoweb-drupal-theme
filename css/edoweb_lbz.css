@@ -348,6 +348,10 @@ table h1.title, h2.title-suffix {
   display: none;
 }
 
+.field-name-field-edoweb-ht-with-link {
+  display: none;
+}
+
 /*.form-type-item a[data-bundle="issue"] {
   display: none;
 }*/
