@@ -339,6 +339,26 @@ table h1.title, h2.title-suffix {
   display: inline;
 }
 
+
+/* restructure search field for EL */
+form, #edoweb-basic-search-entities-form {
+  margin-bottom: 30px;
+
+}
+
+#edoweb-basic-search-entities-form input.form-text, textarea.form-textarea, select.form-select {
+  border: 1px solid #871d33;
+  float: left;
+}
+
+#edoweb-basic-search-entities-form div.form-type-checkbox {
+  margin-bottom: 0.1em;
+  margin-top: 0em;
+}
+
+
+
+
 /* css based reduced information set: get rid of unessessary fields */
 .default .field-name-field-edoweb-title {
   display: none;
