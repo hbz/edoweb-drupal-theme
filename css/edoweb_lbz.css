@@ -348,7 +348,12 @@ form, #edoweb-basic-search-entities-form {
 
 #edoweb-basic-search-entities-form input.form-text, textarea.form-textarea, select.form-select {
   border: 1px solid #871d33;
+  margin-right: 3px;
   float: left;
+}
+
+#edoweb-basic-search-entities-form input.form-submit, button {
+  margin-bottom: 0.1em;
 }
 
 #edoweb-basic-search-entities-form div.form-type-checkbox {
