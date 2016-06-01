@@ -395,3 +395,24 @@ display: none;
 .field-name-field-edoweb-collected-by{
 display: none;
 }
+
+.item-list .edoweb.entity.compact.jquery-once-2-processed .title {
+  display:none !important;
+} 
+ 
+.field-name-field-edoweb-datastream .field-label {
+   display:none !important;
+ }
+ 
+.field-name-field-edoweb-struct-child .entity-label-file {
+   display:none !important;
+ }
+
+.field-name-field-edoweb-identifier-ht{
+        display: none;
+}
+
+#edoweb-basic-crawler-form .form-item{
+display:block;
+clear:both;
+}
