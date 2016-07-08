@@ -412,7 +412,12 @@ display: none;
         display: none;
 }
 
+form-type-item a[data-bundle=researchData]{
+    display: none;
+}
+
 #edoweb-basic-crawler-form .form-item{
 display:block;
 clear:both;
 }
+
