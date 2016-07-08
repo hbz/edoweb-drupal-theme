@@ -341,6 +341,7 @@ form, #edoweb-basic-search-entities-form {
 #edoweb-basic-search-entities-form input.form-text, textarea.form-textarea,
 	select.form-select {
 	border: 1px solid #871d33;
+	margin-right: 2px;
 	float: left;
 }
 
