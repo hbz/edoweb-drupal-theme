@@ -433,6 +433,26 @@ display: none;
     display: none;
 }
 
+#edoweb-tree-menu a[data-bundle=researchData]{
+    display: none;
+}
+
+#edoweb-tree-menu a[data-bundle=volume]{
+    display: none;
+}
+
+#edoweb-tree-menu a[data-bundle=proceeding]{
+    display: none;
+}
+
+#edoweb-tree-menu a[data-bundle=issue]{
+    display: none;
+}
+
+#edoweb-tree-menu a[data-bundle=article]{
+    display: none;
+}
+
 #edoweb-basic-crawler-form .form-item{
 display:block;
 clear:both;
