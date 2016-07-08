@@ -429,6 +429,10 @@ display: none;
     display: none;
 }
 
+.form-type-item a[data-bundle=article]{
+    display: none;
+}
+
 #edoweb-basic-crawler-form .form-item{
 display:block;
 clear:both;
