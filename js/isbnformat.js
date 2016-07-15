@@ -18,16 +18,18 @@
   
   
         function getIsbnFormatted (){
-          var isbn = $('.field-item').html();
           var url = serviceurl + service + isbn + callback;
     
           $.getJSON(url, function(json) {
-            $(this).html(json.result.isbn10formatted);
+             $('.field-name-field-edoweb-isbn10 .field-item').html(json.result.isbn10formatted);
+            
+             $('.field-name-field-edoweb-isbn10')
+                .after('<div class="field-name-field-edoweb-isbn13"></div>')
+                .append('<div class="field-label">ISBN-13:</div><div class="field-item">' + json.result.isbn13formatted + '</div>');
        
-            });
+             });
           };
   
-
       });
     }
   };
