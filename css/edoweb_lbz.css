@@ -454,6 +454,10 @@ display: none;
     display: none;
 }
 
+#edoweb-tree-menu a[data-bundle=version]{
+    display: none;
+}
+
 #edoweb-basic-crawler-form .form-item{
 display:block;
 clear:both;
