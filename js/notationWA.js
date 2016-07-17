@@ -8,7 +8,7 @@
       $('.field-name-field-edoweb-rpb-subject .field-item').each(function() {
         var notationAttr = $(this).find('a.resolved').attr('data-curie').replace(/https:\/\/w3id.org\/lobid\/rpb2#n/,'')
         .replace(/:n/, '');
-        $(this).append('<div class="lbznotation">' + notationAttr + '</div>');
+        $(this).prepend('<span class="lbznotation">' + notationAttr + '</span>');
     
       });
     }
