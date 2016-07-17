@@ -420,6 +420,7 @@ clear:both;
 
 /* workaround for displaying notations, associated with notationWA.js */
 .field-name-field-edoweb-rpb-subject .lbznotation {
-
 margin-right:20px;
+float:left;
+width: 65px;
 }
