@@ -13,6 +13,7 @@ scripts[] = facets.js
 scripts[] = theme.js
 scripts[] = js/isbnformat.js
 scripts[] = jquery.cookie.js
+scripts[] = js/notationWA.js
 
 regions[header] = Header
 regions[help] = Help
