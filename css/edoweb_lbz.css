@@ -434,6 +434,10 @@ display: none;
     display: none;
 }
 
+.form-type-item a[data-bundle=version]{
+    display: none;
+}
+
 #edoweb-tree-menu a[data-bundle=researchData]{
     display: none;
 }
