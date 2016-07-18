@@ -385,9 +385,16 @@ div.field.field-name-field-edoweb-struct-child.field-type-edoweb-ld-reference.fi
 {
  
 }
-.field-name-field-mab-710{
 
+.field-name-field-mab-710 .field-item{
+float:left;
+margin-left: 0em !important;
 }
+
+.field-name-field-mab-710 .field-items{
+margin-left: 12em;
+}
+
 .field-name-field-edoweb-institution{
 display: none;
 }
