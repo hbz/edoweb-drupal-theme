@@ -5,8 +5,8 @@
   Drupal.behaviors.edoweb_drupal_isbn10_format = {
     attach: function (context, settings) {
 
-      var serviceurl = "https://index.hbz-nrw.de/";
-      var service = "_es2/_isbn?value=";
+      var serviceurl = "https://nyx.hbz-nrw.de/";
+      var service = "?value=";
       // Use callback if Service is JSONP
       //var callback = "&callback=?";
       var callback = "";
