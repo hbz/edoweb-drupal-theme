@@ -11,7 +11,7 @@
       //var callback = "&callback=?";
       var callback = "";
 
-      $('.field-name-field-edoweb-isbn10 .field-item').once(function(){
+      $('.field-name-field-edoweb-isbn10 .field-item', context).once(function(){
         
         var isbn = $(this).html();
         getIsbnFormatted();
