@@ -6,7 +6,7 @@
     attach: function (context, settings) {
 
       var serviceurl = "https://nyx.hbz-nrw.de/";
-      var service = "?value=";
+      var service = "isbn?value=";
       // Use callback if Service is JSONP
       //var callback = "&callback=?";
       var callback = "";
