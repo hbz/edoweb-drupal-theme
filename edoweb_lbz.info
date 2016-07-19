@@ -12,6 +12,7 @@ stylesheets[all][] = batch-icons/batch-icons.css
 scripts[] = facets.js
 scripts[] = theme.js
 scripts[] = jquery.cookie.js
+scripts[] = js/mab710WA.js
 
 regions[header] = Header
 regions[help] = Help
