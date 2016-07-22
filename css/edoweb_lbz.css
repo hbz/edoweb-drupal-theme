@@ -385,10 +385,17 @@ div.field.field-name-field-edoweb-struct-child.field-type-edoweb-ld-reference.fi
 {
  
 }
-.field-name-field-mab-710{
-display: none;
 
+.field-name-field-mab-710 .field-item{
+float:left;
+margin-left: 0em !important;
+margin-right: 0.2em;
 }
+
+.field-name-field-mab-710 .field-items{
+margin-left: 12em;
+}
+
 .field-name-field-edoweb-institution{
 display: none;
 }
@@ -413,7 +420,63 @@ display: none;
         display: none;
 }
 
+/* hide all forms for object types not supported by edoweb */ 
+.form-type-item a[data-bundle=researchData]{
+    display: none;
+}
+
+.form-type-item a[data-bundle=volume]{
+    display: none;
+}
+
+.form-type-item a[data-bundle=proceeding]{
+    display: none;
+}
+
+.form-type-item a[data-bundle=issue]{
+    display: none;
+}
+
+.form-type-item a[data-bundle=article]{
+    display: none;
+}
+
+.form-type-item a[data-bundle=version]{
+    display: none;
+}
+
+#edoweb-tree-menu a[data-bundle=researchData]{
+    display: none;
+}
+
+#edoweb-tree-menu a[data-bundle=volume]{
+    display: none;
+}
+
+#edoweb-tree-menu a[data-bundle=proceeding]{
+    display: none;
+}
+
+#edoweb-tree-menu a[data-bundle=issue]{
+    display: none;
+}
+
+#edoweb-tree-menu a[data-bundle=article]{
+    display: none;
+}
+
+#edoweb-tree-menu a[data-bundle=version]{
+    display: none;
+}
+
 #edoweb-basic-crawler-form .form-item{
 display:block;
 clear:both;
+}
+
+/* workaround for displaying notations, associated with notationWA.js */
+.field-name-field-edoweb-rpb-subject .lbznotation {
+margin-right:20px;
+float:left;
+min-width: 70px;
 }
