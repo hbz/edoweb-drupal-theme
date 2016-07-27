@@ -3,8 +3,8 @@
     Drupal.behaviors.edoweb_drupal_theme_paste = {
       attach: function (context, settings) {
 
-        $('.field-item').attr('contenteditable','true').each(function() {
-          $(this).on('paste', function(e){
+        $('.field-item[contenteditable="true"]').once(function() {
+          $(this).bind('paste', function(e){
 
             // prevent execution of paste
             e.preventDefault();
