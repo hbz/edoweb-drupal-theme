@@ -15,7 +15,7 @@ scripts[] = js/isbnformat.js
 scripts[] = jquery.cookie.js
 scripts[] = js/notationWA.js
 scripts[] = js/mab710WA.js
-
+scripts[] = js/pasteWA.js
 regions[header] = Header
 regions[help] = Help
 regions[page_top] = Page top
