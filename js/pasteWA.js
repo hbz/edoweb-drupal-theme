@@ -3,7 +3,7 @@
     Drupal.behaviors.edoweb_drupal_theme_paste = {
       attach: function (context, settings) {
 
-        $('.field-item[contenteditable="true"]').once(function() {
+        $('.field-item[contenteditable="true"]', context).once(function() {
           $(this).bind('paste', function(e){
 
             // prevent execution of paste
@@ -12,6 +12,7 @@
             // get clipboard data as plain text
             var text = e.originalEvent.clipboardData.getData("text/plain");
 
+            // concat clipboard plain text with existing content of contenteditable element 
             var concattext = $(this).html().substr(0, window.getSelection().anchorOffset) + text + $(this).html().substr(window.getSelection().anchorOffset);
       
             $(this).empty().append( concattext );
