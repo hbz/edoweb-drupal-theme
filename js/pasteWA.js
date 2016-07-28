@@ -21,6 +21,9 @@
             // integrate check for ie11 as ie 11 does't support default method
             if (($.browser.msie || $.browser.mozilla) && $.browser.version >= 11 && $.browser.version <= 12){
                text = window.clipboardData.getData("text");
+               if ( !text ){
+                 text='&nbsp;';
+               }
             }else {
                text = e.originalEvent.clipboardData.getData("text/plain");
             }
