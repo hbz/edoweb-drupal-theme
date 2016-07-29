@@ -480,3 +480,8 @@ margin-right:20px;
 float:left;
 min-width: 70px;
 }
+
+/* workaround to prevent result-list from floating under the facets if result-list is to width for browser window */
+.content{
+  min-width: 1366px;
+}
