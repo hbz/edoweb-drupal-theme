@@ -1,4 +1,172 @@
 /* $Id */
+
+/* Mobile first */
+.ui-sortable {
+    display: none;
+}
+
+fieldset.edoweb-facets {
+    width: 100%;
+}
+
+fieldset.edoweb-entity-list {
+    width: 100%;
+}
+
+fieldset.edoweb-entity-list-smart {
+    width: 100%;
+}
+
+.edoweb-entity-list table td, th {
+  display: none;
+}
+
+/*
+.edoweb-entity-list {
+  display: none;
+}
+*/
+
+#header div.section, 
+#navigation div.section,
+featured div.section,
+#messages,
+#main,
+#triptych,
+#footer-columns,
+#footer
+ {
+  min-width: 320px;
+}
+
+
+.edoweb-entity-list table td:nth-child(1),
+.edoweb-entity-list table th:nth-child(1)
+ {
+    display: block; display: table-cell;
+}
+
+#edit-query-0-term {
+    max-width: 60%;
+}
+
+
+@media only screen and (min-width: 800px) {
+
+.ui-sortable {
+    display: none;
+}
+
+fieldset.edoweb-facets {
+    width: 100%;
+}
+
+
+fieldset.edoweb-entity-list {
+    width: 100%;
+}
+
+fieldset.edoweb-entity-list-smart {
+    width: 100%;
+}
+
+.edoweb-entity-list table th:nth-child(1),
+.edoweb-entity-list table td:nth-child(1),
+.edoweb-entity-list table th:nth-child(2),
+.edoweb-entity-list table td:nth-child(2),
+.edoweb-entity-list table th:nth-child(4),
+.edoweb-entity-list table td:nth-child(4),
+.edoweb-entity-list table th:nth-child(5),
+.edoweb-entity-list table td:nth-child(5)
+ {
+    display: block; display: table-cell;
+}
+
+#header div.section, 
+#navigation div.section,
+featured div.section,
+#messages,
+#main,
+#triptych,
+#footer-columns,
+#footer
+ {
+  min-width: 800px;
+}
+
+
+}
+
+@media only screen and (min-width: 1024px) {
+
+.ui-sortable {
+    display: none;
+}
+
+fieldset.edoweb-facets {
+    width: 100%;
+}
+
+
+fieldset.edoweb-entity-list {
+    width: 100%;
+}
+
+fieldset.edoweb-entity-list-smart {
+    width: 100%;
+}
+
+.edoweb-entity-list table th,
+.edoweb-entity-list table td
+ {
+    display: block; display: table-cell;
+}
+
+
+#header div.section, 
+#navigation div.section,
+featured div.section,
+#messages,
+#main,
+#triptych,
+#footer-columns,
+#footer
+ {
+  min-width: 800px;
+}
+
+
+}
+
+@media only screen and (min-width: 1366px) {
+
+.ui-sortable {
+    display: block;
+}
+
+fieldset.edoweb-facets {
+    width: 20%;
+    float: left;
+}
+
+fieldset.edoweb-entity-list {
+    width: 70%;
+    float: left;
+}
+
+fieldset.edoweb-entity-list-smart {
+    width: 100%;
+}
+
+.edoweb-entity-list table th,
+.edoweb-entity-list table td
+ {
+    display: block; display: table-cell;
+}
+
+}
+
+
 body, table, input, label, .fieldset-legend, .ui-widget {
 	font-family: 'Signika', 'Droid Sans', 'PT Sans', helvetica, arial,
 		sans-serif;
@@ -118,10 +286,13 @@ td {
 	font-weight: 300;
 }
 
-/*td .item-list ul li a {
+/*
+td .item-list ul li a {
   word-wrap: break-word;
   word-break: break-word;
-}*/
+}
+*/
+
 table:not ([tableheader-processed] ) th {
 	background-repeat: no-repeat;
 	background-position: right;
@@ -146,23 +317,6 @@ table h1 {
 	margin-top: 3px;
 }
 
-fieldset.edoweb-facets {
-	width: 20%;
-	float: left;
-}
-
-fieldset.edoweb-facets-smart {
-	
-}
-
-fieldset.edoweb-entity-list {
-	width: 75%;
-	float: left;
-}
-
-fieldset.edoweb-entity-list-smart {
-	width: 100%;
-}
 
 #block-edoweb-edoweb-search-block {
 	text-align: right;
@@ -481,7 +635,9 @@ float:left;
 min-width: 70px;
 }
 
-/* workaround to prevent result-list from floating under the facets if result-list is to width for browser window */
-.content{
-  min-width: 1366px;
+/* fix to prevent result-list from floating under the facets if result-list is to width for browser window */
+/* html{
+  box-sizing: border-box;
 }
+*,  ::before, ::after{box-sizing: inherit;}
+*/
