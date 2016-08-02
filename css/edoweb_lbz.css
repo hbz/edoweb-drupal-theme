@@ -51,7 +51,7 @@ featured div.section,
 }
 
 
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 600px) {
 
 .ui-sortable {
     display: none;
@@ -82,6 +82,8 @@ fieldset.edoweb-entity-list-smart {
     display: block; display: table-cell;
 }
 
+
+
 #header div.section, 
 #navigation div.section,
 featured div.section,
@@ -91,7 +93,7 @@ featured div.section,
 #footer-columns,
 #footer
  {
-  min-width: 800px;
+  min-width: 600px;
 }
 
 
@@ -100,16 +102,17 @@ featured div.section,
 @media only screen and (min-width: 1024px) {
 
 .ui-sortable {
-    display: none;
+    display: block;
 }
 
 fieldset.edoweb-facets {
-    width: 100%;
+    width: 20%;
+    float: left;
 }
 
-
 fieldset.edoweb-entity-list {
-    width: 100%;
+    width: 75%;
+    float: left;
 }
 
 fieldset.edoweb-entity-list-smart {
@@ -120,8 +123,18 @@ fieldset.edoweb-entity-list-smart {
 .edoweb-entity-list table td
  {
     display: block; display: table-cell;
+
 }
 
+.edoweb-entity-list table td:nth-child(6),
+.edoweb-entity-list table th:nth-child(7),
+.edoweb-entity-list table td:nth-child(7),
+.edoweb-entity-list table th:nth-child(8),
+.edoweb-entity-list table td:nth-child(8)
+ {
+    word-wrap: break-word;
+    word-break: break-all;
+}
 
 #header div.section, 
 #navigation div.section,
@@ -132,13 +145,13 @@ featured div.section,
 #footer-columns,
 #footer
  {
-  min-width: 800px;
+  min-width: 1024px;
 }
 
 
 }
 
-@media only screen and (min-width: 1366px) {
+@media only screen and (min-width: 1280px) {
 
 .ui-sortable {
     display: block;
@@ -163,6 +176,29 @@ fieldset.edoweb-entity-list-smart {
  {
     display: block; display: table-cell;
 }
+
+.edoweb-entity-list table td:nth-child(6),
+.edoweb-entity-list table th:nth-child(7),
+.edoweb-entity-list table td:nth-child(7),
+.edoweb-entity-list table th:nth-child(8),
+.edoweb-entity-list table td:nth-child(8)
+ {
+    word-wrap: normal;
+    word-break: normal;
+}
+
+#header div.section, 
+#navigation div.section,
+featured div.section,
+#messages,
+#main,
+#triptych,
+#footer-columns,
+#footer
+ {
+  min-width: 1280px;
+}
+
 
 }
 
@@ -286,12 +322,10 @@ td {
 	font-weight: 300;
 }
 
-/*
+
 td .item-list ul li a {
   word-wrap: break-word;
-  word-break: break-word;
 }
-*/
 
 table:not ([tableheader-processed] ) th {
 	background-repeat: no-repeat;
@@ -359,7 +393,7 @@ ul.edoweb-facets-available>li span {
 ul.edoweb-facets-available a {
 	color: #871d33;
 	word-wrap: break-word;
-	word-break: break-word;
+	word-break: break-all;
 }
 
 ul.edoweb-facets-available a:hover {
