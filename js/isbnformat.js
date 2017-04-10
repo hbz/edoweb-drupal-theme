@@ -26,7 +26,7 @@
              $('.field-name-field-edoweb-isbn10')
                 .after('<div class="field field-name-field-edoweb-isbn13"></div>');
 
-             //$('.field-name-field-edoweb-isbn10').hide();
+             $('.field-name-field-edoweb-isbn10').hide();
              $('.field-name-field-edoweb-isbn13').append('<div class="field-label">ISBN-13:</div><div class="field-items"><div class="field-item">' + json.result.isbn13formatted + '</div></div>');
              });
           };
