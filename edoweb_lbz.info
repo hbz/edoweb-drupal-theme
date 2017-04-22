@@ -16,7 +16,6 @@ scripts[] = jquery.cookie.js
 scripts[] = js/notationWA.js
 scripts[] = js/mab710WA.js
 scripts[] = js/pasteWA.js
-scripts[] = js/hideSpecialRpb.js
 
 regions[header] = Header
 regions[help] = Help
