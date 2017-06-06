@@ -795,7 +795,8 @@ tr.inSeries tr.rdftype, tr.inSeries td.numbering,tr.inSeries td.series {
 #example .language a:not([title]), 
 #example .ddc a:not([title]), 
 #example .reviewStatus a:not([title]), 
-#example .publicationStatus a:not([title]) { 
+#example .publicationStatus a:not([title]), 
+#example .rpbSubject a:not([title]) { 
   display:none;                                                                                                                                                                             
 }                                                                                                                                                                                                                                                                                 
 #example .medium .separator, 
@@ -806,7 +807,8 @@ tr.inSeries tr.rdftype, tr.inSeries td.numbering,tr.inSeries td.series {
 #example .language .separator, 
 #example .ddc .separator, 
 #example .reviewStatus .separator, 
-#example .publicationStatus .separator {
+#example .publicationStatus .separator, 
+#example .rpbSubject .separator {
   display:none;
 }
 
