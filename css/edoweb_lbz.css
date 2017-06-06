@@ -779,9 +779,9 @@ tr.inSeries tr.rdftype, tr.inSeries td.numbering,tr.inSeries td.series {
     display:none;
 }
 
-tr.volumeIn tr.rdftype,tr.volumeIn td.numbering,tr.volumeIn td.multiVolumeWork {
+/*tr.volumeIn tr.rdftype,tr.volumeIn td.numbering,tr.volumeIn td.multiVolumeWork {
     display:none;
-}
+}*/
 
 #example .catalogLink a[title], #example .parallelEdition a[title]{
    pointer-events: none;
