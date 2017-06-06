@@ -801,3 +801,6 @@ tr.inSeries tr.rdftype, tr.inSeries td.numbering,tr.inSeries td.series {
     padding: 0;
 }
 
+#example td {
+vertical-align:top;
+}
