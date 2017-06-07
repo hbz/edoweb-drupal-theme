@@ -11,25 +11,19 @@
       //var callback = "&callback=?";
       var callback = "";
 
-      $('.field-name-field-edoweb-isbn10 .field-item', context).once(function(){
+      $('.Isbn li', context).each(function(){
         
         var isbn = $(this).html();
-        getIsbnFormatted();
+        getIsbnFormatted($(this));
   
-  
-        function getIsbnFormatted (){
+        function getIsbnFormatted (element){
           var url = serviceurl + service + isbn + callback;
-    
           $.getJSON(url, function(json) {
-             $('.field-name-field-edoweb-isbn10 .field-item').html(json.result.isbn10formatted);
-
-             $('.field-name-field-edoweb-isbn10')
-                .after('<div class="field field-name-field-edoweb-isbn13"></div>');
-
-             $('.field-name-field-edoweb-isbn10').hide();
-             $('.field-name-field-edoweb-isbn13').append('<div class="field-label">ISBN-13:</div><div class="field-items"><div class="field-item">' + json.result.isbn13formatted + '</div></div>');
-             });
-          };
+              var isbnf = json.result.isbn13formatted;
+	      element.html(isbnf); 
+	      console.log(isbnf);
+            });
+          }
   
       });
     }
