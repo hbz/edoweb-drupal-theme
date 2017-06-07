@@ -203,14 +203,10 @@ featured div.section,
 }
 
 
-body, table, input, label, .fieldset-legend, .ui-widget {
+body, input, label, .fieldset-legend, .ui-widget {
 	font-family: 'Signika', 'Droid Sans', 'PT Sans', helvetica, arial,
 		sans-serif;
 	line-height: 1.3em;
-}
-
-table {
-	font-size: 0.9em;
 }
 
 .fieldset-legend {
@@ -683,31 +679,52 @@ a[href*="regal"] span.octicon.octicon-link-external{
 a[href^="http://dewey.info"] span.octicon.octicon-link-external{
     display: none;
 }
-#example table{
- border-spacing: 0;
-    border-collapse: collapse;
- padding: 0;
+
+table {
+	font-size: 0.9em;
+        font-family: 'Signika', 'Droid Sans', 'PT Sans', helvetica, arial,sans-serif;
+        line-height: 1.3em;
+	border-spacing: 0;
+	border-collapse: collapse;
+	padding-top: 0;
+	padding-right: 0px;
+	padding-bottom: 0px;
+	padding-left: 0px;
 }
+
+#example {
+    width:auto;
+    padding-left:20px;
+}
+
 #example tr td, tr {
     background-color:#ffffff !important;
+    border-spacing: 0;
+    border-collapse: collapse;
+    padding-top: 0;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    padding-left: 10px;
+    margin:0;
+}
+
+
+#example ul,
+#example ol {
+    list-style-type: none;
     border-spacing: 0;
     border-collapse: collapse;
     padding: 0;
     margin:0;
 }
 
-#example ul{
-  border-spacing: 0;
-    border-collapse: collapse;
-    padding: 0;
-    margin:0;
-
+#example td {
+    vertical-align:top;
 }
 
 
 #example th {
-    display:none;
-    
+    display:none;    
 }
 
 #example .isDescribedBy , #example .primaryTopic ,#example .itemID , 
@@ -812,12 +829,4 @@ tr.inSeries tr.rdftype, tr.inSeries td.numbering,tr.inSeries td.series {
   display:none;
 }
 
-#example ul,#example ol {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
 
-#example td {
-vertical-align:top;
-}
