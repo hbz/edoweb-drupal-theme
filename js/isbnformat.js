@@ -7,10 +7,10 @@
 
       var serviceurl = "https://nyx.hbz-nrw.de/";
       var service = "isbn?value=";
-      // Use callback if Service is JSONP
-      //var callback = "&callback=?";
       var callback = "";
 
+
+      $('.Isbn .field-label').html("ISBN-13");     
       $('.Isbn li', context).each(function(){
         
         var isbn = $(this).html();
