@@ -315,7 +315,7 @@ div.item-list>ul {
 
 td {
 	max-width: 30em;
-	font-weight: 300;
+	font-weight: 400;
 }
 
 
@@ -738,7 +738,7 @@ table {
 }
 
 .field-label{
-    font-weight:bold;
+    font-weight:400;
 }
 
 
@@ -825,7 +825,9 @@ tr.inSeries tr.rdftype, tr.inSeries td.numbering,tr.inSeries td.series {
 #example .ddc .separator, 
 #example .reviewStatus .separator, 
 #example .publicationStatus .separator, 
-#example .rpbSubject .separator {
+#example .rpbSubject .separator 
+#example p 
+{
   display:none;
 }
 
