@@ -71,9 +71,11 @@
         'monograph': 'octicon-repo',
         'journal': 'octicon-versions',
         'webpage': 'octicon-browser',
-        'part': 'octicon-file-submodule'
+        'part': 'octicon-file-submodule',
+        'link' : 'octicon-link-external'  
       }
 
+      $('.glyphicon-link').removeClass('glyphicon').removeClass('glyphicon-link').addClass('octicon '+icons['link']);
       for (var bundle in icons) {
         var icon = icons[bundle];
         $('#content .form-type-item a[data-bundle="' + bundle + '"]', context).prepend($('<span>&nbsp;</span>').addClass('octicon ' + icon));
