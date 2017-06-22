@@ -68,6 +68,10 @@
         'issue': 'octicon-book',
         'file': 'octicon-file-binary',
         'version': 'octicon-git-branch'
+        'monograph': 'mega-octicon octicon-repo',
+        'journal': 'octicon octicon-versions',
+        'webpage': 'octicon octicon-browser',
+        'part': 'octicon octicon-file-submodule',
       }
 
       for (var bundle in icons) {
@@ -97,16 +101,16 @@
     attach: function (context, settings) {
 
       var icons = {
-        'monograph': 'livivoicon-doctype-mono',
-        'journal': 'livivoicon-doctype-journal',
-        'article': 'livivoicon-doctype-article',
-        'webpage': 'livivoicon-doctype-online',
-        'diss': 'livivoicon-doctype-diss',
-        'av': 'livivoicon-doctype-av',
-        'conf': 'livivoicon-doctype-conf',
-        'part': 'livivoicon-doctype-collection',
-        'researchData':'livivoicon-doctype-conf'	
+        'volume': 'octicon-list-ordered',
+        'issue': 'octicon-book',
+        'file': 'octicon-file-binary',
+        'version': 'octicon-git-branch'
+        'monograph': 'mega-octicon octicon-repo',
+        'journal': 'octicon octicon-versions',
+        'webpage': 'octicon octicon-browser',
+        'part': 'octicon octicon-file-submodule',
       }
+
       
       for (var bundle in icons) {
         var icon = icons[bundle];
