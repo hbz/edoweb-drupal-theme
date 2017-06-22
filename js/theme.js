@@ -54,8 +54,6 @@
 	     if($('.active :contains("Edit")').html() != null || $('.active :contains("Bearbeiten")').html() != null){
 	    	    	return;
 	     }
-	     console.log("3");
-
 
             $('tr.hasData', context).once(function(){
 		//$(this).find('.field-label').html('Hallo');
@@ -63,7 +61,6 @@
 	     //$('.field-name-field-edoweb-struct-child .field-label').text(fieldLabel);
 	     //$('.field-name-field-edoweb-struct-child').find('.field-label:first').text(fieldLabelParent);
 	         var dataLink = $('tr.identifier td div a', context).attr('href') + '/data';
-	         console.log('theme.js Zeile 66: ' + dataLink);
 	         if("undefined/data"==dataLink)return;
 				var mimetype = $('tr td div.mimeType').html();
 				var pictureField = '<div class="field field-name-field-edoweb-preview">'
@@ -95,7 +92,6 @@
 	     //$('.field-name-field-edoweb-struct-child .field-label').text(fieldLabel);
 	     //$('.field-name-field-edoweb-struct-child').find('.field-label:first').text(fieldLabelParent);
 	         var dataLink = $('tr.identifier a', context).attr('href') + '/data';
-	         console.log('theme.js Zeile 98: ' + dataLink);
 	         if("undefined/data"==dataLink)return;
 				var mimetype = $('tr td div.mimeType').html();
 				var pictureField = '<div class="field field-name-field-edoweb-preview">'
@@ -116,7 +112,6 @@
 						+ '<div class="field-items">'
 						+ '<div class="field-item" property="dc:format" style="display: none;">'
 						+ mimetype + '</div>' + '</div>' + '</div>' + '</div>';
-console.log(mimetype);
 				$('div.container', context).once().before($(pictureField));
 	     });
     } 
