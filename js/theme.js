@@ -86,7 +86,7 @@
 
 
 	    // Preview for direct url call
-            $('tr.hasPart', context).find('.fileView:first').once(function(){
+            $('tr.hasPart', context).find('.file.fileView:first').once(function(){
 		//$(this).find('.field-label').html('Hallo');
 	    
 	     //$('.field-name-field-edoweb-struct-child .field-label').text(fieldLabel);
