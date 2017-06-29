@@ -842,3 +842,6 @@ tr.inSeries tr.rdftype, tr.inSeries td.numbering,tr.inSeries td.series {
 }
 
 
+.subjectChain{
+white-space : nowrap;
+}
