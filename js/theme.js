@@ -55,7 +55,13 @@
 	    	    	return;
 	     }
 
-            $('tr.hasData', context).once(function(){
+        if( $('body').hasClass("entity-type-version")){
+	       return;
+	   }
+   
+	$('tr.hasData', context).once(function(){
+
+	   
 		//$(this).find('.field-label').html('Hallo');
 	    
 	     //$('.field-name-field-edoweb-struct-child .field-label').text(fieldLabel);
