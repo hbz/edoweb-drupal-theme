@@ -23,7 +23,7 @@
 
   // Add Font-Awesome
   drupal_add_css('css/font-awesome.min.css');
-
+  //drupal_add_css('bootstrap/css/bootstrap.css');
   }
 
 ?> 

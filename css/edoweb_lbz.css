@@ -203,14 +203,10 @@ featured div.section,
 }
 
 
-body, table, input, label, .fieldset-legend, .ui-widget {
+body, input, label, .fieldset-legend, .ui-widget {
 	font-family: 'Signika', 'Droid Sans', 'PT Sans', helvetica, arial,
 		sans-serif;
 	line-height: 1.3em;
-}
-
-table {
-	font-size: 0.9em;
 }
 
 .fieldset-legend {
@@ -319,7 +315,7 @@ div.item-list>ul {
 
 td {
 	max-width: 30em;
-	font-weight: 300;
+	font-weight: 400;
 }
 
 
@@ -675,3 +671,177 @@ min-width: 70px;
 }
 *,  ::before, ::after{box-sizing: inherit;}
 */
+
+
+a[href*="regal"] span.octicon.octicon-link-external{
+    display: none;
+}
+a[href^="http://dewey.info"] span.octicon.octicon-link-external{
+    display: none;
+}
+
+table {
+	font-size: 0.9em;
+        font-family: 'Signika', 'Droid Sans', 'PT Sans', helvetica, arial,sans-serif;
+        line-height: 1.3em;
+	border-spacing: 0;
+	border-collapse: collapse;
+	padding-top: 0;
+	padding-right: 0px;
+	padding-bottom: 0px;
+	padding-left: 0px;
+}
+
+#example {
+    width:auto;
+    padding-left:20px;
+}
+
+#example tr td, tr {
+    background-color:#ffffff !important;
+    border-spacing: 0;
+    border-collapse: collapse;
+    padding-top: 0px;
+    padding-right: 20px;
+    padding-bottom: 2px;
+    padding-left: 0px;
+    margin:0;
+}
+
+/* empty <p> tags occupy a lot of vertical space. Needs to be fixed in html view! */
+#example tr ul li p {
+    display: none;
+}
+
+#example ul,
+#example ol {
+    list-style-type: none;
+    border-spacing: 0;
+    border-collapse: collapse;
+    padding: 0;
+    margin:0;
+}
+
+#example td {
+    vertical-align:top;
+}
+
+
+#example th {
+    display:none;    
+}
+
+table table {
+ margin: 0;
+}
+
+#example .isDescribedBy , #example .primaryTopic ,#example .itemID , 
+#example .title, #example .hbzId, #example .contributorOrder, 
+#example .fulltextOnline, #example .contributingCorporateBodyLabel,
+#example .isPrimaryTopicOf,#example .hasVersion,
+#example .isLike,#example .exemplar,#example .subjectOrder,#example .seeAlso,
+#example .subjectLabel, #example .creator,
+#example .contributor, #example .volume, #example .externalParent {
+    display:none;
+}
+
+.field-label{
+    font-weight:600;
+}
+
+#example td.field-item{
+ width: 50em;
+}
+
+.public-access {
+    position:relative;
+} 
+.public-access:before{
+    color:green;
+    content: "\f13e";
+    font-family: FontAwesome;
+    top:0;
+    left:-5px;
+    padding-right:10px;
+}
+
+.private-access {
+    position:relative;
+} 
+.private-access:before{
+    color:red;
+    content: "\f023";
+   font-family: FontAwesome;
+    top:0;
+    left:-5px;
+    padding-right:10px;
+}
+.restricted-access {
+    position:relative;
+} 
+.restricted-access:before{
+    color:orange;
+    font-family: FontAwesome;
+    top:0;
+    left:-5px;
+    padding-right:10px;
+    content: "\f023";
+}
+
+.hasPart ul { list-style-type: none; width: 100%; margin: 5; padding: 10px; }
+.hasPart ul li { display: inline;}
+.hasPart {vertical-align:top;}
+
+.downloadIcon img{
+    vertical-align: bottom;
+    width:20px;
+}
+
+.downloadIcon a,.downloadIcon div,.downloadIcon span,.downloadIcon img {
+    display:inline-block;
+}
+td:empty {
+  display:none;
+}
+
+tr.inSeries tr.rdftype, tr.inSeries td.numbering,tr.inSeries td.series {
+    display:none;
+}
+
+/*tr.volumeIn tr.rdftype,tr.volumeIn td.numbering,tr.volumeIn td.multiVolumeWork {
+    display:none;
+}*/
+
+#example .catalogLink a[title], #example .parallelEdition a[title]{
+   pointer-events: none;
+   cursor: default;
+   color:rgb(75, 75, 77);
+}
+
+#example .medium  a:not([title]), 
+#example .subject a:not([title]), 
+#example .rdftype a:not([title]), 
+#example .language a:not([title]), 
+#example .ddc a:not([title]), 
+#example .reviewStatus a:not([title]), 
+#example .publicationStatus a:not([title]), 
+#example .rpbSubject a:not([title]) { 
+  display:none;                                                                                                                                                                             
+}                                                                                                                                                                                                                                                                                 
+#example .medium .separator, 
+#example .subject .separator, 
+#example .rdftype .separator, 
+#example .nwbibsubject .separator, 
+#example .nwbibspatial .separator, 
+#example .language .separator, 
+#example .ddc .separator, 
+#example .reviewStatus .separator, 
+#example .publicationStatus .separator, 
+#example .rpbSubject .separator {
+  display:none;
+}
+
+
+.subjectChain{
+white-space : nowrap;
+}
