@@ -741,7 +741,7 @@ table table {
 #example .isPrimaryTopicOf,#example .hasVersion,
 #example .isLike,#example .exemplar,#example .subjectOrder,#example .seeAlso,
 #example .subjectLabel, #example .creator,
-#example .contributor, #example .volume, #example .externalParent {
+#example .contributor, #example .volume, #example .externalParent, #example .collectionOne, #example .accessScheme, #example .publishScheme, #example .contentType, #example .sameAs,#example .describedby,#example .parallelEdition, #example .hasItem, #example .doi  {
     display:none;
 }
 
@@ -844,4 +844,48 @@ tr.inSeries tr.rdftype, tr.inSeries td.numbering,tr.inSeries td.series {
 
 .subjectChain{
 white-space : nowrap;
+}
+
+
+#example ul,#example ol {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+
+#author-title-list {
+  display: inline;
+  list-style: none;
+  list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+#author-title-list, .componentList {
+  display: inline;
+  list-style: none;
+  list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+#author-title-list li, .componentList li {
+  display: inline;
+}
+
+#author-title-list li:after, .componentList li:after {
+  content: ", ";
+}
+
+#author-title-list li:last-child:after , .componentList li:last-child:after{
+    content: "";
+}
+
+.contribution tr td, .contribution tr th {
+	margin: 0;
+    padding: 0;
+}
+
+.not-front .form-item.form-type-item {
+ display:none;
 }
