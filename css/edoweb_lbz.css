@@ -840,8 +840,9 @@ tr.inSeries tr.rdftype, tr.inSeries td.numbering,tr.inSeries td.series {
 #example .reviewStatus a:not([title]), 
 #example .publicationStatus a:not([title]), 
 #example .rpbSubject a:not([title]) { 
-  display:none;                                                                                                                                                                             
-}                                                                                                                                                                                                                                                                                 
+display:none;                                                                                                                                                                             
+}
+                                                                                                                                                                                                                              
 #example .medium .separator, 
 #example .subject .separator, 
 #example .rdftype .separator, 
@@ -905,6 +906,9 @@ body[class^="entity-type"] div.form-item.form-type-item {
 }
 
 
+body.not-front div.form-item.form-type-item {
+ display:none;
+}
 
 .hasPart td .field-item, #hasPartList, #hasPartList table, #hasPartList td, #hasPartList tr{
 background-color:#efefef;
