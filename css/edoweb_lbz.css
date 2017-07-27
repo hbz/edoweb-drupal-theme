@@ -757,7 +757,9 @@ th {
 #example .describedby,
 #example .parallelEdition, 
 #example .hasItem, 
-#example .doi  {
+#example .doi,
+#example .predecessor,
+#example .successor  {
     display:none;
 }
 
@@ -824,7 +826,7 @@ tr.inSeries tr.rdftype, tr.inSeries td.numbering,tr.inSeries td.series {
     display:none;
 }*/
 
-#example .catalogLink a[title], #example .parallelEdition a[title]{
+#example .catalogLink a[title], #example .parallelEdition a[title], #example .webPageArchived a[title]{
    pointer-events: none;
    cursor: default;
    color:rgb(75, 75, 77);
@@ -897,14 +899,15 @@ white-space : nowrap;
     padding: 0;
 }
 
-body.html.not-front div.form-item.form-type-item {
+body[class^="entity-type"] div.form-item.form-type-item {
  display:none;
 }
 
 
 
-#hasPartList table, #hasPartList td, #hasPartList tr{
+.hasPart td .field-item, #hasPartList, #hasPartList table, #hasPartList td, #hasPartList tr{
 background-color:#efefef;
+border-color:#efefef;
 padding:0;
 margin:0;
 }
