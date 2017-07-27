@@ -759,7 +759,8 @@ th {
 #example .hasItem, 
 #example .doi,
 #example .predecessor,
-#example .successor  {
+#example .successor,
+#example .subjectAltLabel  {
     display:none;
 }
 
