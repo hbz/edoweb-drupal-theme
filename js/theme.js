@@ -58,6 +58,9 @@
         if( $('body').hasClass("entity-type-version")){
 	       return;
 	   }
+        else if( $('body').hasClass("entity-type-webpage")){
+               return;
+           }
    
 	$('tr.hasData', context).once(function(){
 
