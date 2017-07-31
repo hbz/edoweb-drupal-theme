@@ -62,16 +62,13 @@
                return;
            }
    
-	$('tr.hasData', context).once(function(){
-
-	   
-		//$(this).find('.field-label').html('Hallo');
-	    
-	     //$('.field-name-field-edoweb-struct-child .field-label').text(fieldLabel);
-	     //$('.field-name-field-edoweb-struct-child').find('.field-label:first').text(fieldLabelParent);
-	         var dataLink = $('tr.identifier td div a', context).attr('href') + '/data';
+	    $('table[data-entity-bundle=file]', context).once(function(){
+		
+	         var dataLink = '/resource/'+$('table', context).attr('resource') + '/data';
+	
 	         if("undefined/data"==dataLink)return;
-				var mimetype = $('tr td div.mimeType').html();
+
+		var mimetype = $('tr td .mimeType').html();
 				var pictureField = '<div class="field field-name-field-edoweb-preview">'
 						+ '<div class="field-label"></div>'
 						+ '<div class="field-item thumb" >'
