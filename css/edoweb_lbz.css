@@ -940,3 +940,7 @@ border-color:#efefef;
 padding:0;
 margin:0;
 }
+
+.publishSchemeSummary.public-access {
+display:none;
+}
