@@ -933,7 +933,7 @@ body[class^="entity-type"] div.form-item.form-type-item {
 
 
 body.not-front div.form-item.form-type-item {
- display:none;
+// display:none;
 }
 
 .hasPart td .field-item, #hasPartList, #hasPartList table, #hasPartList td, #hasPartList tr{
