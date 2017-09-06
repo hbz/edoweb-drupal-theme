@@ -762,7 +762,8 @@ th {
 #example .successor,
 #example .subjectAltLabel, 
 #example .medium,
-#example .note {
+#example .note,
+#example .corporateBodyForTitle {
     display:none;
 }
 
