@@ -27,18 +27,6 @@
 
   Drupal.behaviors.edoweb_drupal_theme_child = {
     attach: function (context, settings) {
-
-    	
-    $('td[property="http://purl.org/ontology/bibo/doi"]').each(function() {
-        var link = $(this).html();
-        $(this).contents().wrap('<a href="http://dx.doi.org/'+link+'" target="_blank"></a>');
-    });
-    
-    $('tr.urn td.field-item li').each(function() {
-        var link = $(this).html();
-        $(this).contents().wrap('<a href="http://nbn-resolving.de/'+link+'" target="_blank"></a>');
-    });
-
     //var fieldLabelParent = 'Dateiliste:';
     var fieldLabel = 'Download:';
     var thumbSize = '&size=250';
