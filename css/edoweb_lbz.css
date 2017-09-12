@@ -691,13 +691,27 @@ table {
 	padding-bottom: 0px;
 	padding-left: 0px;
 }
+
+.hasPart, .hasPart table, .hasPart tr , .hasPart td {
+    background-color:#efefef !important;
+    border: none;
+}
+
+.fileView, .fileView table, .fileView tr , .fileView td {
+background-color:#efefef !important;
+       border: none;
+}
+
+
 #example {
     width:auto;
     padding-left:20px;
 }
+#example tr td {
+    background-color:#ffffff;
+}
 
 table , tr, td {
-    background-color:#ffffff;
     border-spacing: 0;
     border-collapse: collapse;
     padding-top: 0px;
@@ -935,13 +949,6 @@ body[class^="entity-type"] div.form-item.form-type-item {
 
 body.not-front div.form-item.form-type-item {
 // display:none;
-}
-
-.hasPart td .field-item, #hasPartList, #hasPartList table, #hasPartList td, #hasPartList tr{
-background-color:#efefef;
-border-color:#efefef;
-padding:0;
-margin:0;
 }
 
 .publishSchemeSummary.public-access {
