@@ -844,7 +844,7 @@ tr.inSeries tr.rdftype, tr.inSeries td.numbering,tr.inSeries td.series {
     display:none;
 }*/
 
-#example .catalogLink a[title], #example .parallelEdition a[title], #example .webPageArchived a[title]{
+#example .catalogLink a[title], #example .parallelEdition a[title], #example .webPageArchived a[title], #example .primaryForm a[title]{
    pointer-events: none;
    cursor: default;
    color:rgb(75, 75, 77);
