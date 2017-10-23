@@ -955,3 +955,21 @@ body.not-front div.form-item.form-type-item {
 .publishSchemeSummary.public-access {
 display:none;
 }
+
+
+ .titleMain, .otherTitle{
+	color:#871d33;
+	font-size: .6em;
+    font-family: "Signika"; font-style: normal; 
+ }
+ 
+ 
+ .titlePost ol{
+ 	margin: 0em 0;
+ 	padding: 0 0 0em 0em;
+ 	color:#000000;
+}
+
+.titlePost a{
+	color:#000000;
+}
