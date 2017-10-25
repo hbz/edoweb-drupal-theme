@@ -957,19 +957,22 @@ display:none;
 }
 
 
- .titleMain, .otherTitle{
+.item-list .titleMain,.item-list .otherTitle, .item-list .corporateBodyForTitle{
 	color:#871d33;
 	font-size: .6em;
     font-family: "Signika"; font-style: normal; 
  }
  
  
- .titlePost ol{
+.item-list .titlePost ol{
  	margin: 0em 0;
  	padding: 0 0 0em 0em;
  	color:#000000;
 }
 
-.titlePost a{
+.item-list .titlePost a{
 	color:#000000;
+}
+body{
+color:#000000;
 }
