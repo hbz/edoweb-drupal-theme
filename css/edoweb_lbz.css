@@ -529,10 +529,44 @@ form, #edoweb-basic-search-entities-form {
 	float: left;
 }
 
+
 #edoweb-basic-search-entities-form div.form-type-checkbox {
 	margin-bottom: 0.1em;
 	margin-top: 0em;
 }
+
+/* css forms for crawler configuration */
+#edit-urlsexcluded{
+	clear:both;
+	margin-top: 3em;
+}
+
+#edit-limitcrawlsize{
+	clear:both;
+	margin-top: 3em;
+}
+
+#edoweb-basic-crawler-form .form-item{
+    display:block;
+    clear:both;
+}
+
+#edoweb-basic-crawler-form .form-item-startDate .form-item{
+    display:inline;
+}
+
+#edoweb-basic-crawler-form .form-item-maxCrawlSize{
+    display:inline;
+}
+
+#edoweb-basic-crawler-form .form-item-quotaUnitSelection{
+    display:inline;
+}
+
+#edoweb-basic-crawler-form .form-item label{
+    padding-top:0.7em;
+}
+
 
 /* css based reduced information set: get rid of unessessary fields */
 .default .field-name-field-edoweb-title {
@@ -651,11 +685,6 @@ display: none;
 
 #edoweb-tree-menu a[data-bundle=version]{
     display: none;
-}
-
-#edoweb-basic-crawler-form .form-item{
-display:block;
-clear:both;
 }
 
 /* workaround for displaying notations, associated with notationWA.js */
