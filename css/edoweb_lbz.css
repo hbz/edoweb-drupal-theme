@@ -805,7 +805,6 @@ th {
 .resourceTable .successor,
 .resourceTable .subjectAltLabel, 
 .resourceTable .medium,
-.resourceTable .note,
 .resourceTable .corporateBodyForTitle {
     display:none;
 }
