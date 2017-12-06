@@ -26,6 +26,9 @@
   -ms-user-select: none;
   user-select: none;
 }
+.red {
+  color: red;
+}
 .mega-octicon {
   font: normal normal 32px octicons;
   line-height: 1;
