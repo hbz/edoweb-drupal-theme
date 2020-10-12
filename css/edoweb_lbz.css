@@ -1,5 +1,6 @@
 /* $Id */
 
+
 /* Mobile first */
 .ui-sortable {
     display: none;
@@ -1004,3 +1005,11 @@ display:none;
 body{
 color:#000000;
 }
+
+/* hide private documents */
+body.not-logged-in.entity-type-webpage a.private-download,
+body.not-logged-in.entity-type-webpage .fileView table.private,
+body.not-logged-in.entity-type-webpage .edoweb-tree  a[data-bundle="file"] {
+    display: none !important;
+}
+
