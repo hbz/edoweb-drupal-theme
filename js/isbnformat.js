@@ -4,8 +4,9 @@
 
   Drupal.behaviors.edoweb_drupal_isbn10_format = {
     attach: function (context, settings) {
-
-      var serviceurl = "https://nyx.hbz-nrw.de/";
+      
+      /* requires proxy configuration on localhost to ISBN webservice  */
+      var serviceurl = "/";
       var service = "isbn?value=";
       var callback = "";
 
